@@ -136,7 +136,7 @@ To work with time successfully in programming, we need three different concepts:
 <!--
 - **Time Zones** &mdash; A “time zone” is a bunch of data that allows you to turn POSIX time into human time. This is _not_ just `UTC-7` or `UTC+3` though! Time zones are way more complicated than a simple offset! Every time [Florida switches to DST forever][florida] or [Samoa switches from UTC-11 to UTC+13][samoa], some poor soul adds a note to the [IANA time zone database][iana]. That database is loaded onto every computer, and between POSIX time and all the corner cases in the database, we can figure out human times!
 -->
-- **タイムゾーン** &mdash; "タイムゾーン"とは、POSIX時間から人間にとっての時間へ変換するために必要なデータの集まりです。これは単なる`UTC-7`とか`UTC+3`などとは _異なります_ ！タイムゾーンは単純なオフセットではなく、かなりもっと複雑なのです！[フロリダにおけるサマータイムへの恒久的な移行][florida]、[サモアでのUTC-11からUCT+13への移行][samoa]、などと[IANAのタイムゾーンデータベース][iana]に無慈悲な脚注が追加されてしまいます。このデータベースが個々のコンピュータに読み込まれ、POSIX時間をデータベースに記載された全てのコーナーケースの情報を反映するよう計算することにより、人間にとっての時間として表示することが可能となるのです。
+- **タイムゾーン** &mdash; "タイムゾーン"とは、POSIX時間から人間にとっての時間へ変換するために必要なデータの集まりです。これは単なる`UTC-7`とか`UTC+3`などとは _異なります_ ！タイムゾーンは単純なオフセットではなく、かなりもっと複雑なのです！[フロリダにおけるサマータイムへの恒久的な移行][florida]、[サモアでのUTC-11からUTC+13への移行][samoa]、などと[IANAのタイムゾーンデータベース][iana]に無慈悲な脚注が追加されてしまいます。このデータベースが個々のコンピュータに読み込まれ、POSIX時間をデータベースに記載された全てのコーナーケースの情報を反映するよう計算することにより、人間にとっての時間として表示することが可能となるのです。
 
 <!--
 So to show a human being a time, you must always know `Time.Posix` and `Time.Zone`. That is it! So all that “human time” stuff is for the `view` function, not the `Model`. In fact, you can see that in our `view`:
